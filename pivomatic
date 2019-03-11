@@ -84,7 +84,6 @@ check-slug() {
     read RELEASEID
     RELEASE=$(pivnet releases -p $SLUG --format json | jq ".[] | select(.id == ${RELEASEID}).version")
     echo "Chose $RELEASE"
-    exit 1
   fi
 }
 
